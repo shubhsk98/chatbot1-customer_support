@@ -23,10 +23,11 @@ from dotenv import load_dotenv
 load_dotenv()
 ## load the GROQ API Key
 ##os.environ['GROQ_API_KEY']=os.getenv("GROQ_API_KEY")
+GROQ_API_KEY = st.secrets.get("GROQ_API_KEY", os.getenv("GROQ_API_KEY"))
 
-groq_api_key=os.getenv("GROQ_API_KEY")
+##groq_api_key=os.getenv("GROQ_API_KEY")
 
-llm=ChatGroq(groq_api_key=groq_api_key,model_name="llama-3.1-8b-instant")
+llm=ChatGroq(groq_api_key=GROQ_API_KEY,model_name="llama-3.1-8b-instant")
 
 prompt = ChatPromptTemplate.from_messages([
     ("system", 
@@ -123,6 +124,7 @@ if user_prompt:
     #st.write(f"⏱ Response time: {time.process_time()-start:.2f}s")
     st.markdown(f"**AI:**,  {result['answer']}")
     
+
 
 
 
