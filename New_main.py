@@ -22,7 +22,6 @@ from langchain_core.runnables.history import RunnableWithMessageHistory
 from dotenv import load_dotenv
 load_dotenv()
 ## load the GROQ API Key
-os.environ['HF_TOKEN']=os.getenv("HF_TOKEN")
 os.environ['GROQ_API_KEY']=os.getenv("GROQ_API_KEY")
 
 groq_api_key=os.getenv("GROQ_API_KEY")
@@ -124,6 +123,7 @@ if user_prompt:
     #st.write(f"⏱ Response time: {time.process_time()-start:.2f}s")
     st.markdown(f"**AI:**,  {result['answer']}")
     
+
 
 
 
