@@ -1,0 +1,55 @@
+venv/
+__pycache__/
+chroma_db/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+*.log
+*.h5
+*.pkl
+*.env
+
+
+
+# Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+.env
+venv/
+ENV/
+env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Local database / embeddings
+chroma_db/
+*.db
+*.sqlite3
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
+
+# Model / data files (if not needed in repo)
+*.h5
+*.pkl
+*.ckpt
+*.pt
+*.onnx
+
+# Temporary files
+*.tmp
+*.swp
